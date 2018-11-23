@@ -34,4 +34,6 @@ struct mem_instruction:
 	-type
 	-operation (0: LW, 1: SW)
 	-int reg1
-	-int reg2 
+	-int reg2
+
+If we are going to simulate the whole system, we need to add instructions to memory accordingly. Therefore we have to keep track of the address at which they should be placed. That's why we need to keep track of the offsets at which the various segments start and so forth. 
