@@ -1,0 +1,37 @@
+These will be the first few instructions:
+	add
+	sub
+	mul
+	div
+	lw
+	sw
+	and
+	or
+	xor
+
+The parser will take a buffer with a single instruction and parse it into a instruction data type.
+
+There are 2 types of instructions: arithmetical-logical and memory.
+
+Once they're parsed, they will get executed.
+
+The parser needs to only do what stated above, nothing else.
+
+PARAMETERS: char* buffer
+RETURN: instruction
+
+struct instruction:
+	-type
+
+struct arlog_instruction:
+	-type
+	-operation (0: ADD, 1: SUB, 2: MUL, 3: DIV, 4: AND, 5: OR, 6: XOR)
+	-int reg1 (store register)
+	-int reg2 (first opperand)
+	-int reg3 (second opperand)
+
+struct mem_instruction:
+	-type
+	-operation (0: LW, 1: SW)
+	-int reg1
+	-int reg2 
