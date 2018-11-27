@@ -10,11 +10,11 @@ typedef enum arlog_operation_type arglog_operation_t;
 typedef enum mem_operation_type mem_operation_t;
 
 struct instruction{
-	instruction_type type;
+	instruction_t type;
 };
 
 struct arlog_instruction{
-	instruction_type type;
+	instruction_t type;
 	arglog_operation_t operation;
 	int rd;
 	int rs;
@@ -22,7 +22,7 @@ struct arlog_instruction{
 };
 
 struct mem_instruction{
-	instruction_type type;
+	instruction_t type;
 	mem_operation_t operation;
 	int rd;
 	int rs;

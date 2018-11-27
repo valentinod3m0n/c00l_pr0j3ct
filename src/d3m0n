@@ -36,4 +36,6 @@ struct mem_instruction:
 	-int reg1
 	-int reg2
 
-If we are going to simulate the whole system, we need to add instructions to memory accordingly. Therefore we have to keep track of the address at which they should be placed. That's why we need to keep track of the offsets at which the various segments start and so forth. 
+If we are going to simulate the whole system, we need to add instructions to memory accordingly. Therefore we have to keep track of the address at which they should be placed. That's why we need to keep track of the offsets at which the various segments start and so forth.
+
+To parse the program, we need to first look for variables and labels and then look for instructions. This is because instructions like branches will reference labels and in order to parse them we will need to have them beforehand.
